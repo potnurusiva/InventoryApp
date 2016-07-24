@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/prod_image"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/holo_green_light"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+         />
+
+    <LinearLayout
+        android:id="@+id/prod_details"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@id/prod_image"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <TextView
+            android:id="@+id/prod_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Code"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/prod_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/prod_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Quantity"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/prod_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Price"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/prod_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sell"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="sellProduct"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+</RelativeLayout>
