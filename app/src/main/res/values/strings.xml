@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">InventoryApp</string>
+    <string name="product_code">Product Code \u0020:   </string>
+    <string name="product_name">Product Name \u0020:</string>
+    <string name="product_quantity">Product Quantity :</string>
+    <string name="product_price">Price \u0020:</string>
+    <string name="name">Enter Name</string>
+    <string name="quantity">Enter Quantity</string>
+    <string name="price">Enter Price</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="save">SAVE</string>
+    <string name="update">UPDATE</string>
+    <string name="order_more">ORDER MORE</string>
+    <string name="delete">DELETE</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="sell">SELL</string>
+
 </resources>

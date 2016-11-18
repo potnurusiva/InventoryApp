@@ -14,42 +14,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/prod_code_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Code :"
-                android:textSize="18dp"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:text="@string/product_code"
+                android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/prod_name_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Name :"
-                android:textSize="18dp"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:text="@string/product_name"
+                android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/prod_quantity_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Quantity :"
-                android:textSize="18dp"
+                android:layout_marginTop="10dp"
                 android:padding="8dp"
-                android:layout_marginTop="10dp"/>
+                android:text="@string/product_quantity"
+                android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/prod_price_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price :"
-                android:textSize="18dp"
+                android:layout_marginTop="10dp"
                 android:padding="8dp"
-                android:layout_marginTop="10dp"/>
+                android:text="@string/product_price"
+                android:textSize="18dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -60,44 +66,65 @@
                 android:id="@+id/prod_code_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="111"
                 android:textSize="18dp"
-                android:textStyle="bold"
-                android:padding="8dp"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/prod_name_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Name"/>
+                android:hint="@string/name" />
 
             <EditText
                 android:id="@+id/prod_quantity_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Quantity"
-                android:inputType="number"/>
+                android:hint="@string/quantity"
+                android:inputType="number" />
 
             <EditText
                 android:id="@+id/prod_price_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Price"
-                android:inputType="numberDecimal"/>
+                android:hint="@string/price"
+                android:inputType="numberDecimal" />
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/prod_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/prod_details_layout"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/prod_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prod_image"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="uploadImage"
+        android:padding="8dp"
+        android:text="@string/upload_image"
+        android:textColor="@android:color/white"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/prod_details_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/prod_details_layout"
-        android:text="SAVE"
+        android:layout_above="@+id/prod_details_menu"
         android:layout_centerHorizontal="true"
-        android:visibility="visible"
-        android:textColor="@android:color/white"
         android:background="@android:color/holo_red_dark"
-        android:onClick="saveProduct"/>
+        android:onClick="saveProduct"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:visibility="visible" />
 
     <LinearLayout
         android:id="@+id/prod_details_menu"
@@ -111,31 +138,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="UPDATE"
-            android:textColor="@android:color/white"
             android:background="@android:color/holo_red_dark"
-            android:visibility="visible"
-            android:onClick="updateProduct"/>
+            android:onClick="updateProduct"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
         <Button
             android:id="@+id/prod_details_order"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ORDER MORE"
-            android:textColor="@android:color/white"
             android:background="@android:color/holo_green_dark"
-            android:visibility="visible"
-            android:onClick="orderProduct"/>
+            android:onClick="orderProduct"
+            android:text="@string/order_more"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
         <Button
             android:id="@+id/prod_details_delete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DELETE"
-            android:textColor="@android:color/white"
             android:background="@android:color/holo_red_dark"
-            android:visibility="visible"
-            android:onClick="deleteProduct"/>
+            android:onClick="deleteProduct"
+            android:text="@string/delete"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
 
     </LinearLayout>
 </RelativeLayout>

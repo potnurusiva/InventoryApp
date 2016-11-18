@@ -8,17 +8,20 @@ public class Product {
     private String productName;
     private int productQuantity;
     private float productPrice;
+    private byte[] image;
 
-    public Product(int productCode, String productName, int productQuantity, float productPrice){
+    public Product(int productCode, String productName, int productQuantity, float productPrice, byte[] image) {
         this.productCode = productCode;
         this.productName = productName;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
+        this.image = image;
     }
 
-    public int getProductCode(){
+    public int getProductCode() {
         return productCode;
     }
+
     public String getProductName() {
         return productName;
     }
@@ -29,5 +32,9 @@ public class Product {
 
     public int getProductQuantity() {
         return productQuantity;
+    }
+
+    public byte[] getImage() {
+        return image;
     }
 }
